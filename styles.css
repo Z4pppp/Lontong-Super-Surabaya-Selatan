@@ -1,0 +1,157 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0; /* Warna latar belakang halaman */
+    font-family: montserrat;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #fff; /* Warna latar belakang konten */
+    border-bottom: 1px solid #ddd; /* Garis bawah setiap bagian */
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    color: #333; /* Warna teks judul */
+}
+
+.section p {
+    color: #666; /* Warna teks paragraf */
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #4CAF50; /* Warna hijau untuk navbar */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: sans-serif;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #3e8e41; /* Warna hijau lebih gelap saat hover */
+}
+
+/* Burger menu for responsive design */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #4CAF50; /* Warna hijau untuk menu burger pada layar kecil */
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+    }
+
+    .burger.active .line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active .line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Contact information */
+.contact-info {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.contact-info strong {
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
